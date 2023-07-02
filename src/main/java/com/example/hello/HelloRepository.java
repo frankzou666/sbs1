@@ -12,7 +12,7 @@ public class HelloRepository {
 	@Autowired
 	public JdbcTemplate jdbcTemplate;
 	Map<String ,Object> getUserById(String id){
-		//SQL statement
+		//SQL statements
 		String query="select * from  employee where id = ?";
 		//use jdbc template to query , your should  to remember the queryuFormap() method
 		Map<String ,Object> employees = jdbcTemplate.queryForMap(query, id);
